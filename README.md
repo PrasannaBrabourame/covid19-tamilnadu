@@ -1,2 +1,24 @@
 # covid19-tamilnadu
-Vue JS Dashboard for COVID19 Tamilnadu. Data from the source https://stopcorona.tn.gov.in/daily-bulletin/
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
