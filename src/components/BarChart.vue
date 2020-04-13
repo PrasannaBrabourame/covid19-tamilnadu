@@ -32,7 +32,7 @@ export default {
             borderWidth: 0.2,
             pointBorderColor: "#249EBF",
             data: data.dorson.yellow
-          }
+          },
         ]
       },
       options: {

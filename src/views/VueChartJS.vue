@@ -1,6 +1,5 @@
 <template>
   <section class="container">
-    <h1>COVID19-TamilNadu</h1>
     <div class="columns">
       <div class="column">
         <h3>DistrictWise Details</h3>
@@ -30,7 +29,6 @@
 <script>
 import LineChart from "@/components/LineChart";
 import BarChart from "@/components/BarChart";
-console.log(BarChart)
 
 export default {
   name: "VueChartJS",

@@ -11,10 +11,11 @@ export default {
         datasets: [
           {
             label: "Total Cases",
-            backgroundColor: "#f87979",
+            borderColor: "#249EBF",
             pointBackgroundColor: "white",
             borderWidth: 1,
             pointBorderColor: "#249EBF",
+            backgroundColor: "transparent",
             data: data.dateWise
           }
         ]
