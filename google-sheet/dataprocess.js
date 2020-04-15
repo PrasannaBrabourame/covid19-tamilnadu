@@ -23,7 +23,13 @@ let dataObj = {
     },
     "district": districtDetails,
     "dateList": dateDetails,
-    "dateWise": []
+    "dateWise": [],
+    "spreadTrend": {
+        "date": [],
+        "positive": [],
+        "cured": [],
+        "death": []
+    }
 }
 for (let index = 0; index < districtDetails.length; index++) {
     const dist = districtDetails[index];
@@ -50,7 +56,15 @@ for (let index = 0; index < dateDetails.length; index++) {
     const dateDet = dateDetails[index];
     const element = groupDate[dateDet];
     dataObj.dateWise.push(element.length)
+}
 
+for (let index = 0; index < statsData.length; index++) {
+    const element = statsData[index];
+    dataObj.spreadTrend.date.push(element.date);
+    dataObj.spreadTrend.cured.push(element.dischared);
+    dataObj.spreadTrend.positive.push(element.activecovid);
+    dataObj.spreadTrend.death.push(element.deathtotal);
+    
 }
 fs.writeFileSync('./google-sheet/process.json', JSON.stringify(dataObj));
 console.log(1)

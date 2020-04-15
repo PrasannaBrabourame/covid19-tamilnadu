@@ -1,16 +1,28 @@
 <template>
   <div id="app">
-    <h1>COVID19-TamilNadu</h1>
+    <h1>COVID19-TAMILNADU</h1>
     <div>
       <div class="row w-row">
         <div class="basic-column w-col w-col-3">
           <div class="tag-wrapper">
+            <div class="number-card number-card-content4">
+              <h1 class="number-card-number">2,10,538</h1>
+              <div class="number-card-divider"></div>
+              <div class="number-card-progress-wrapper">
+                <div class="tagline number-card-currency">Screened Passengers</div>
+                <div class="number-card-progress"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="basic-column w-col w-col-3">
+          <div class="tag-wrapper">
             <div class="number-card number-card-content1">
-              <h1 class="number-card-number">1173</h1>
+              <h1 class="number-card-number">1,204</h1>
               <div class="number-card-divider"></div>
               <div class="number-card-progress-wrapper">
                 <div class="tagline number-card-currency">ACTIVE</div>
-                <div class="number-card-progress">+98</div>
+                <div class="number-card-progress">+31</div>
               </div>
             </div>
           </div>
@@ -18,11 +30,11 @@
         <div class="basic-column w-col w-col-3">
           <div class="tag-wrapper">
             <div class="number-card number-card-content2">
-              <h1 class="number-card-number">58</h1>
+              <h1 class="number-card-number">81</h1>
               <div class="number-card-divider"></div>
               <div class="number-card-progress-wrapper">
                 <div class="tagline number-card-currency">CURED</div>
-                <div class="number-card-progress">+8</div>
+                <div class="number-card-progress">+23</div>
               </div>
             </div>
           </div>
@@ -30,11 +42,11 @@
         <div class="basic-column w-col w-col-3">
           <div class="tag-wrapper">
             <div class="number-card number-card-content3">
-              <h1 class="number-card-number">11</h1>
+              <h1 class="number-card-number">12</h1>
               <div class="number-card-divider"></div>
               <div class="number-card-progress-wrapper">
                 <div class="tagline number-card-currency">DEATH</div>
-                <div class="number-card-progress">+0</div>
+                <div class="number-card-progress">+1</div>
               </div>
             </div>
           </div>
@@ -42,11 +54,11 @@
         <div class="basic-column w-col w-col-3">
           <div class="tag-wrapper">
             <div class="number-card number-card-content4">
-              <h1 class="number-card-number">12746</h1>
+              <h1 class="number-card-number">19,255</h1>
               <div class="number-card-divider"></div>
               <div class="number-card-progress-wrapper">
                 <div class="tagline number-card-currency">Total Tested</div>
-                <div class="number-card-progress">+2091</div>
+                <div class="number-card-progress">+6,509</div>
               </div>
             </div>
           </div>
@@ -56,6 +68,12 @@
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
 
 <style>
 #app {
@@ -80,6 +98,7 @@ h1 {
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 h1 {
   font-size: 38px;
   line-height: 44px;
@@ -102,7 +121,7 @@ h1 {
   padding-right: 10px;
 }
 .w-col-3 {
-  width: 25%;
+  width: 20%;
 }
 @media screen and (max-width: 767px) {
   .w-row {

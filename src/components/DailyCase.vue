@@ -1,7 +1,6 @@
 <script>
 import { Line } from "vue-chartjs";
 import data from "../../google-sheet/process.json";
-
 export default {
   extends: Line,
   data() {
@@ -15,41 +14,41 @@ export default {
             pointBackgroundColor: "white",
             borderWidth: 1,
             pointBorderColor: "#249EBF",
-            backgroundColor: "transparent",
-            data: data.dateWise
-          }
-        ]
+            backgroundColor: '#f87979',
+            data: data.dateWise,
+          },
+        ],
       },
       options: {
         scales: {
           yAxes: [
             {
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
               },
               gridLines: {
-                display: true
-              }
-            }
+                display: true,
+              },
+            },
           ],
           xAxes: [
             {
               gridLines: {
-                display: false
-              }
-            }
-          ]
+                display: false,
+              },
+            },
+          ],
         },
         legend: {
-          display: true
+          display: true,
         },
         responsive: true,
-        maintainAspectRatio: false
-      }
+        maintainAspectRatio: false,
+      },
     };
   },
   mounted() {
     this.renderChart(this.datacollection, this.options);
-  }
+  },
 };
 </script>

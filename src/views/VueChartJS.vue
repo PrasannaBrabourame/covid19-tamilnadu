@@ -2,39 +2,37 @@
   <section class="container">
     <div class="columns">
       <div class="column">
-        <h3>DistrictWise Details</h3>
+        <h3>DISTRICTWISE POSITIVE DETAILS</h3>
         <bar-chart></bar-chart>
       </div>
     </div>
     <div class="columns">
       <div class="column">
-        <h3>Datewise COVID19 Positive Cases</h3>
-        <line-chart></line-chart>
+        <h3>DATEWISE POSITIVE CASES</h3>
+        <daily-case></daily-case>
+        
       </div>
     </div>
-    <!-- <div class="columns">
+    <div class="columns">
       <div class="column">
-        <h3>Bubble Chart</h3>
-        <bubble-chart></bubble-chart>
+        <h3>SPREAD TRENDS TAMILNADU</h3>
+        <spread-trend></spread-trend>
       </div>
-      <div class="column">
-        <h3>Reactivity - Live update upon change in datasets</h3>
-        <reactive :chart-data="datacollection"></reactive>
-        <button class="button is-primary" @click="fillData()">Randomize</button>
-      </div>
-    </div> -->
+    </div>
   </section>
 </template>
 
 <script>
-import LineChart from "@/components/LineChart";
+import DailyCase from "@/components/DailyCase";
 import BarChart from "@/components/BarChart";
+import SpreadTrend from "@/components/SpreadTrend"
 
 export default {
   name: "VueChartJS",
   components: {
-    LineChart,
-    BarChart
+    DailyCase,
+    BarChart,
+    SpreadTrend
   }
 };
 </script>
