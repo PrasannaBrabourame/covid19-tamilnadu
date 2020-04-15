@@ -49,6 +49,7 @@ export default {
           ],
           xAxes: [
             {
+              stacked: true,
               gridLines: {
                 display: false
               }

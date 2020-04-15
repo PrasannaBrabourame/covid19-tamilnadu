@@ -21,7 +21,7 @@
               <h1 class="number-card-number">1,204</h1>
               <div class="number-card-divider"></div>
               <div class="number-card-progress-wrapper">
-                <div class="tagline number-card-currency">ACTIVE</div>
+                <div class="tagline number-card-currency">TOTAL POSITIVE CASES</div>
                 <div class="number-card-progress">+31</div>
               </div>
             </div>
@@ -33,7 +33,7 @@
               <h1 class="number-card-number">81</h1>
               <div class="number-card-divider"></div>
               <div class="number-card-progress-wrapper">
-                <div class="tagline number-card-currency">CURED</div>
+                <div class="tagline number-card-currency">CURED/DISCHARGED</div>
                 <div class="number-card-progress">+23</div>
               </div>
             </div>
@@ -57,7 +57,7 @@
               <h1 class="number-card-number">19,255</h1>
               <div class="number-card-divider"></div>
               <div class="number-card-progress-wrapper">
-                <div class="tagline number-card-currency">Total Tested</div>
+                <div class="tagline number-card-currency">TOTAL TESTED</div>
                 <div class="number-card-progress">+6,509</div>
               </div>
             </div>

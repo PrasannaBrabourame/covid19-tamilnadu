@@ -3,19 +3,19 @@ import { Line } from "vue-chartjs";
 import data from "../../google-sheet/process.json";
 const colors = {
   green: {
-    fill: '#e0eadf',
-    stroke: '#5eb84d',
+    fill: "#e0eadf",
+    stroke: "#5eb84d",
   },
   lightBlue: {
-    stroke: '#6fccdd',
+    stroke: "#6fccdd",
   },
   darkBlue: {
-    fill: '#92bed2',
-    stroke: '#3282bf',
+    fill: "#92bed2",
+    stroke: "#3282bf",
   },
   purple: {
-    fill: '#8fa8c8',
-    stroke: '#75539e',
+    fill: "#8fa8c8",
+    stroke: "#75539e",
   },
 };
 export default {
@@ -54,7 +54,7 @@ export default {
             pointHighlightStroke: colors.lightBlue.stroke,
             borderCapStyle: "butt",
             data: data.spreadTrend.death,
-          }
+          },
         ],
       },
       options: {
@@ -71,6 +71,7 @@ export default {
           ],
           xAxes: [
             {
+              stacked: true,
               gridLines: {
                 display: false,
               },
