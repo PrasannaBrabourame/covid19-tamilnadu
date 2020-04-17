@@ -1,8 +1,8 @@
 <script>
-import { Line } from "vue-chartjs";
+import { Bar } from "vue-chartjs";
 import data from "../../google-sheet/process.json";
 export default {
-  extends: Line,
+  extends: Bar,
   data() {
     return {
       datacollection: {
