@@ -28,7 +28,8 @@ let dataObj = {
         "date": [],
         "positive": [],
         "cured": [],
-        "death": []
+        "death": [],
+        "active": []
     }
 }
 for (let index = 0; index < districtDetails.length; index++) {
@@ -64,7 +65,9 @@ for (let index = 0; index < statsData.length; index++) {
     dataObj.spreadTrend.cured.push(element.dischared);
     dataObj.spreadTrend.positive.push(element.activecovid);
     dataObj.spreadTrend.death.push(element.deathtotal);
-    
+    let active = Number(element.activecovid) - (Number(element.deathtotal) + Number(element.dischared));
+    dataObj.spreadTrend.active.push(active)
+
 }
 fs.writeFileSync('./google-sheet/process.json', JSON.stringify(dataObj));
 console.log(1)
