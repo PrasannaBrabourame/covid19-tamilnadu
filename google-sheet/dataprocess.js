@@ -14,6 +14,15 @@ dateDetails.sort(function compare(a, b) {
     var dateB = new Date(b);
     return dateA - dateB;
 });
+function formatNumber(num) {
+    var n1, n2;
+    num = num + '' || '';
+    n1 = num.split('.');
+    n2 = n1[1] || null;
+    n1 = n1[0].replace(/(\d)(?=(\d\d)+\d$)/g, "$1,");
+    num = n2 ? n1 + '.' + n2 : n1;
+    return num;
+}
 let dataObj = {
     "dorson": {
         "red": [],
@@ -21,6 +30,15 @@ let dataObj = {
         "yellow": [],
         "green": []
     },
+    "totalScreened": "",
+    "totalPositive": "",
+    "totalCured": "",
+    "totalDeath": "",
+    "totalTest": "",
+    "totalPositiveToday": "",
+    "totalCuredToday": "",
+    "totalDeathToday": "",
+    "totalTestToday": "",
     "district": districtDetails,
     "dateList": dateDetails,
     "dateWise": [],
@@ -32,6 +50,19 @@ let dataObj = {
         "active": []
     }
 }
+let statDataLast = statsData[statsData.length - 1]
+let statDataComp = statsData[statsData.length - 2]
+dataObj.totalScreened = formatNumber(statDataLast.passengerscreened)
+dataObj.totalPositive = formatNumber(statDataLast.activecovid)
+dataObj.totalCured = formatNumber(statDataLast.discharged)
+dataObj.totalDeath = formatNumber(statDataLast.deathtotal)
+dataObj.totalTest = formatNumber(statDataLast.samplestested)
+dataObj.totalPositiveToday = formatNumber(Number(statDataComp.activecovid) - Number(statDataLast.activecovid))
+dataObj.totalCuredToday = formatNumber(Number(statDataLast.discharged) - Number(statDataComp.discharged))
+dataObj.totalDeathToday = formatNumber(Number(statDataLast.death))
+dataObj.totalTestToday = formatNumber(Number(statDataLast.samplestested) - Number(statDataComp.samplestested))
+
+
 for (let index = 0; index < districtDetails.length; index++) {
     const dist = districtDetails[index];
     const element = groupLocation[dist];
