@@ -62,10 +62,10 @@ for (let index = 0; index < dateDetails.length; index++) {
 for (let index = 0; index < statsData.length; index++) {
     const element = statsData[index];
     dataObj.spreadTrend.date.push(element.date);
-    dataObj.spreadTrend.cured.push(element.dischared);
+    dataObj.spreadTrend.cured.push(element.discharged);
     dataObj.spreadTrend.positive.push(element.activecovid);
     dataObj.spreadTrend.death.push(element.deathtotal);
-    let active = Number(element.activecovid) - (Number(element.deathtotal) + Number(element.dischared));
+    let active = Number(element.activecovid) - (Number(element.deathtotal) + Number(element.discharged));
     dataObj.spreadTrend.active.push(active)
 
 }
