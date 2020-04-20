@@ -7,7 +7,7 @@
     "build": "npm run data && vue-cli-service build",
     "lint": "npm run clean && vue-cli-service lint",
     "clean": "rm -rf ./docs",
-    "data":"node ./google-sheet/crawl.js && node ./google-sheet/dataprocess.js"
+    "data":"npm run clean && node ./google-sheet/crawl.js && node ./google-sheet/dataprocess.js"
   },
   "dependencies": {
     "chart.js": "^2.7.3",
