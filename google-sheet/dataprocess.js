@@ -52,15 +52,18 @@ let dataObj = {
 }
 let statDataLast = statsData[statsData.length - 1]
 let statDataComp = statsData[statsData.length - 2]
+let totalPositiveToday = Number(statDataLast.activecovid) - Number(statDataComp.activecovid)
+let totalCuredToday = Number(statDataLast.discharged) - Number(statDataComp.discharged)
+let totalTestToday = Number(statDataLast.samplestested) - Number(statDataComp.samplestested)
 dataObj.totalScreened = formatNumber(statDataLast.passengerscreened)
 dataObj.totalPositive = formatNumber(statDataLast.activecovid)
 dataObj.totalCured = formatNumber(statDataLast.discharged)
 dataObj.totalDeath = formatNumber(statDataLast.deathtotal)
 dataObj.totalTest = formatNumber(statDataLast.samplestested)
-dataObj.totalPositiveToday = formatNumber(Number(statDataComp.activecovid) - Number(statDataLast.activecovid))
-dataObj.totalCuredToday = formatNumber(Number(statDataLast.discharged) - Number(statDataComp.discharged))
-dataObj.totalDeathToday = formatNumber(Number(statDataLast.death))
-dataObj.totalTestToday = formatNumber(Number(statDataLast.samplestested) - Number(statDataComp.samplestested))
+dataObj.totalPositiveToday = totalPositiveToday > 0 ? `+ ${totalPositiveToday}` : `${totalPositiveToday}`
+dataObj.totalCuredToday = totalCuredToday > 0 ? `+ ${totalCuredToday}` : `${totalCuredToday}`
+dataObj.totalDeathToday = Number(statDataLast.death) > 0 ? `+ ${Number(statDataLast.death)}` : `${Number(statDataLast.death)}`
+dataObj.totalTestToday = totalTestToday > 0 ? `+ ${totalTestToday}` : `${totalTestToday}`
 
 
 for (let index = 0; index < districtDetails.length; index++) {
