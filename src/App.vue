@@ -2,12 +2,13 @@
   <div id="app">
     <h1>COVID19 - TAMILNADU</h1>
     <router-view />
+    <div id="ola-chatbot"></div>
+    <script src="https://s3-ap-southeast-1.amazonaws.com/configs.internal.olasearch.com/production/5e5b40da435e993f586ae8a5/olasearch.min.js"></script>
   </div>
 </template>
 
 <script>
 // import BulletPoints from '@/views/BulletPoints'
-
 </script>
 
 <style>
