@@ -1,17 +1,6 @@
 <script>
 import { Doughnut } from "vue-chartjs";
 import data from "../../google-sheet/process.json";
-// "distribution": {
-//         "date": "25-Apr-2020",
-//         "male-t": "1240",
-//         "female-t": "581",
-//         "m": "55",
-//         "f": "49",
-//         "m_2": "1032",
-//         "f_2": "471",
-//         "m_3": "153",
-//         "f_3": "61"
-//     }
 export default {
   extends: Doughnut,
   data() {

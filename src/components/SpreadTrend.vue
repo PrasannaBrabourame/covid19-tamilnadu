@@ -75,7 +75,7 @@ export default {
                 beginAtZero: true,
               },
               gridLines: {
-                display: true,
+                display: false,
               },
             },
           ],
