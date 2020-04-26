@@ -5,6 +5,8 @@ let rawdata = fs.readFileSync('./google-sheet/districtwise.json');
 let districtData = JSON.parse(rawdata);
 let stadata = fs.readFileSync('./google-sheet/stats.json');
 let statsData = JSON.parse(stadata);
+let distdata = fs.readFileSync('./google-sheet/distribution.json');
+let distributionData = JSON.parse(distdata);
 let groupDate = _.groupBy(districtData, 'date');
 let groupLocation = _.groupBy(districtData, 'location');
 let districtDetails = Object.keys(groupLocation);
@@ -49,13 +51,16 @@ let dataObj = {
         "cured": [],
         "death": [],
         "active": []
-    }
+    },
+    "distribution":[]
 }
+
 let statDataLast = statsData[statsData.length - 1]
 let statDataComp = statsData[statsData.length - 2]
 let totalPositiveToday = Number(statDataLast.activecovid) - Number(statDataComp.activecovid)
 let totalCuredToday = Number(statDataLast.discharged) - Number(statDataComp.discharged)
 let totalTestToday = Number(statDataLast.samplestested) - Number(statDataComp.samplestested)
+dataObj.distribution = distributionData[distributionData.length -1]
 dataObj.totalScreened = formatNumber(statDataLast.passengerscreened)
 dataObj.totalPositive = formatNumber(statDataLast.activecovid)
 dataObj.totalCured = formatNumber(statDataLast.discharged)
