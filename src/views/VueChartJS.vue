@@ -1,5 +1,8 @@
 <template>
   <div>
+    <!-- <span>Start</span>
+    <test-store></test-store>
+    <span>End</span> -->
     <bullet-points></bullet-points>
     <section class="container">
       <div class="columns">
@@ -88,6 +91,7 @@ import BarChart from "@/components/BarChart";
 import SpreadTrend from "@/components/SpreadTrend";
 import DistributionChart from "@/components/DistributionChart";
 import AgeChart from "@/components/AgeChart";
+import TestStore from "@/components/TestStore";
 import BulletPoints from "./BulletPoints";
 
 export default {
@@ -99,6 +103,7 @@ export default {
     SpreadTrend,
     DistributionChart,
     AgeChart,
+    TestStore
   },
 };
 </script>
