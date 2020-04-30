@@ -10,7 +10,16 @@ let distributionData = JSON.parse(distdata);
 let groupDate = _.groupBy(districtData, 'date');
 let groupLocation = _.groupBy(districtData, 'location');
 let districtDetails = Object.keys(groupLocation);
-districtDetails = districtDetails.sort();
+//districtDetails = districtDetails.sort();
+var arrangeOrder = [];
+var distSplitup = Object.entries(groupLocation)
+for (let index = 0; index < distSplitup.length; index++) {
+    const element = distSplitup[index];
+    arrangeOrder.push({ "name": element[0], "count": element[1].length })
+
+}
+arrangeOrder = arrangeOrder.sort((a, b) => { return b.count - a.count })
+districtDetails = arrangeOrder.map((a) => { return a.name }, [])
 // var test = groupLocation.sort(function (one, other) {
 //     return one.elements.length - other.elements.length;
 //  });
@@ -55,7 +64,7 @@ let dataObj = {
         "death": [],
         "active": []
     },
-    "distribution":[]
+    "distribution": []
 }
 
 let statDataLast = statsData[statsData.length - 1]
@@ -63,7 +72,7 @@ let statDataComp = statsData[statsData.length - 2]
 let totalPositiveToday = Number(statDataLast.activecovid) - Number(statDataComp.activecovid)
 let totalCuredToday = Number(statDataLast.discharged) - Number(statDataComp.discharged)
 let totalTestToday = Number(statDataLast.samplestested) - Number(statDataComp.samplestested)
-dataObj.distribution = distributionData[distributionData.length -1]
+dataObj.distribution = distributionData[distributionData.length - 1]
 dataObj.totalScreened = formatNumber(statDataLast.passengerscreened)
 dataObj.totalPositive = formatNumber(statDataLast.activecovid)
 dataObj.totalCured = formatNumber(statDataLast.discharged)
