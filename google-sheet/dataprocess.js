@@ -11,6 +11,9 @@ let groupDate = _.groupBy(districtData, 'date');
 let groupLocation = _.groupBy(districtData, 'location');
 let districtDetails = Object.keys(groupLocation);
 districtDetails = districtDetails.sort();
+// var test = groupLocation.sort(function (one, other) {
+//     return one.elements.length - other.elements.length;
+//  });
 let dateDetails = Object.keys(groupDate);
 dateDetails.sort(function compare(a, b) {
     var dateA = new Date(a);
