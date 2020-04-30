@@ -21,6 +21,11 @@ const drive = require("drive-db");
         tab: '3'
     });
     fs.writeFileSync('./google-sheet/distribution.json', JSON.stringify(db3));
+    const db4 = await drive({
+        sheet: '1ohySElL1ef73VDGIFPcwwHsDVDp6bHcUiEKHgQ8KReM',
+        tab: '4'
+    });
+    fs.writeFileSync('./google-sheet/discharge.json', JSON.stringify(db4));
     console.log("Crawl Completed")
 
 })();

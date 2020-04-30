@@ -36,6 +36,10 @@ export default {
               gridLines: {
                 display: false,
               },
+              ticks: {
+                autoSkip: true,
+                maxTicksLimit: 15,
+              },
             },
           ],
         },

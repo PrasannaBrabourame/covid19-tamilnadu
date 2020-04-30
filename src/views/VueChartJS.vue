@@ -25,6 +25,12 @@
       </div>
       <div class="columns">
         <div class="column">
+          <h3>DISTRICTWISE DISCHARGE DETAILS</h3>
+          <discharge-chart></discharge-chart>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
           <h3>SEX DISTRIBUTION</h3>
           <distribution-chart></distribution-chart>
         </div>
@@ -78,9 +84,22 @@
         ><span>Crowdsourced Patient Database&nbsp;</span></a
       >
       <p class="footer-heart">
-  Made with <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
-<img class="emoji" alt="heart" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"></g-emoji> by <a href="https://github.com/PrasannaBrabourame">Prasanna Brabourame</a>
-</p>
+        Made with
+        <g-emoji
+          class="g-emoji"
+          alias="heart"
+          fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"
+        >
+          <img
+            class="emoji"
+            alt="heart"
+            height="20"
+            width="20"
+            src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"
+        /></g-emoji>
+        by
+        <a href="https://github.com/PrasannaBrabourame">Prasanna Brabourame</a>
+      </p>
     </footer>
   </div>
 </template>
@@ -91,7 +110,9 @@ import BarChart from "@/components/BarChart";
 import SpreadTrend from "@/components/SpreadTrend";
 import DistributionChart from "@/components/DistributionChart";
 import AgeChart from "@/components/AgeChart";
+import DischargeChart from "@/components/DischargeChart";
 import TestStore from "@/components/TestStore";
+
 import BulletPoints from "./BulletPoints";
 
 export default {
@@ -103,7 +124,8 @@ export default {
     SpreadTrend,
     DistributionChart,
     AgeChart,
-    TestStore
+    DischargeChart,
+    TestStore,
   },
 };
 </script>
@@ -144,12 +166,12 @@ footer {
   width: 15.5rem;
 }
 .excel {
-    background: rgba(51,166,103,.19);
-    color: #33a667;
+  background: rgba(51, 166, 103, 0.19);
+  color: #33a667;
 }
 
-footer>* {
-    align-self: center;
-    text-align: center;
+footer > * {
+  align-self: center;
+  text-align: center;
 }
 </style>

@@ -1,0 +1,142 @@
+[
+    {
+        "state": "Ariyalur",
+        "count": "4"
+    },
+    {
+        "state": "Chengalpattu",
+        "count": "48"
+    },
+    {
+        "state": "Chennai",
+        "count": "214"
+    },
+    {
+        "state": "Coimbatore",
+        "count": "125"
+    },
+    {
+        "state": "Cuddalore",
+        "count": "21"
+    },
+    {
+        "state": "Dindigul",
+        "count": "71"
+    },
+    {
+        "state": "Erode",
+        "count": "69"
+    },
+    {
+        "state": "Kallakurichi",
+        "count": "3"
+    },
+    {
+        "state": "Kancheepuram",
+        "count": "9"
+    },
+    {
+        "state": "Kanyakumari",
+        "count": "10"
+    },
+    {
+        "state": "Karur",
+        "count": "41"
+    },
+    {
+        "state": "Madurai",
+        "count": "40"
+    },
+    {
+        "state": "Nagapattinam",
+        "count": "35"
+    },
+    {
+        "state": "Namakkal",
+        "count": "49"
+    },
+    {
+        "state": "Nilgiris",
+        "count": "9"
+    },
+    {
+        "state": "Perambalur",
+        "count": "1"
+    },
+    {
+        "state": "Ramanathapuram",
+        "count": "10"
+    },
+    {
+        "state": "Ranipet",
+        "count": "33"
+    },
+    {
+        "state": "Salem",
+        "count": "23"
+    },
+    {
+        "state": "Sivagangai",
+        "count": "10"
+    },
+    {
+        "state": "Tenkasi",
+        "count": "5"
+    },
+    {
+        "state": "Thanjavur",
+        "count": "35"
+    },
+    {
+        "state": "Theni",
+        "count": "37"
+    },
+    {
+        "state": "Thirupathur",
+        "count": "17"
+    },
+    {
+        "state": "Thiruvallur",
+        "count": "30"
+    },
+    {
+        "state": "Thiruvannamalai",
+        "count": "10"
+    },
+    {
+        "state": "Thiruvarur",
+        "count": "16"
+    },
+    {
+        "state": "Thoothukudi",
+        "count": "25"
+    },
+    {
+        "state": "Tirunelveli",
+        "count": "54"
+    },
+    {
+        "state": "Tiruppur",
+        "count": "103"
+    },
+    {
+        "state": "Trichy",
+        "count": "45"
+    },
+    {
+        "state": "Vellore",
+        "count": "14"
+    },
+    {
+        "state": "Villupuram",
+        "count": "23"
+    },
+    {
+        "state": "Virudhunagar",
+        "count": "19"
+    },
+    {
+        "state": "Grand Total",
+        "count": "1,258"
+    }
+]

@@ -7,31 +7,15 @@ export default {
   data() {
     return {
       datacollection: {
-        labels: data.district,
+        labels: data.dischargeData.dischargeDistrict,
         datasets: [
           {
-            label: "Above 20",
-            backgroundColor: "#e91e27",
-            pointBackgroundColor: "black",
-            borderWidth: 0.2,
-            pointBorderColor: "#249EBF",
-            data: data.dorson.red,
-          },
-          {
-            label: "Above 10 Below 20",
+            label: "Discharged",
             backgroundColor: "#ff9800",
             pointBackgroundColor: "black",
             borderWidth: 0.2,
             pointBorderColor: "#249EBF",
-            data: data.dorson.orange,
-          },
-          {
-            label: "Below 10",
-            backgroundColor: "#cddc39",
-            pointBackgroundColor: "black",
-            borderWidth: 0.2,
-            pointBorderColor: "#249EBF",
-            data: data.dorson.yellow,
+            data: data.dischargeData.dischargeCount,
           },
         ],
       },

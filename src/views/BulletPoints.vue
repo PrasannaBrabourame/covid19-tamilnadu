@@ -64,7 +64,9 @@
             </div>
           </div>
         </div>
+        <span>Last Updated : 30th April 2020</span>
       </div>
+      
     </div>
   </div>
 </template>

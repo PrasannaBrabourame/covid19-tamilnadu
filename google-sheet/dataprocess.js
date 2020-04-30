@@ -7,6 +7,8 @@ let stadata = fs.readFileSync('./google-sheet/stats.json');
 let statsData = JSON.parse(stadata);
 let distdata = fs.readFileSync('./google-sheet/distribution.json');
 let distributionData = JSON.parse(distdata);
+let discharge = fs.readFileSync('./google-sheet/discharge.json')
+let dischargeData = JSON.parse(discharge);
 let groupDate = _.groupBy(districtData, 'date');
 let groupLocation = _.groupBy(districtData, 'location');
 let districtDetails = Object.keys(groupLocation);
@@ -20,6 +22,9 @@ for (let index = 0; index < distSplitup.length; index++) {
 }
 arrangeOrder = arrangeOrder.sort((a, b) => { return b.count - a.count })
 districtDetails = arrangeOrder.map((a) => { return a.name }, [])
+dischargeData = dischargeData.sort((a, b) => { return b.count - a.count })
+dischargeDistrict = dischargeData.map((a) => { return a.state }, [])
+dischargeCount = dischargeData.map((a) => { return a.count }, [])
 // var test = groupLocation.sort(function (one, other) {
 //     return one.elements.length - other.elements.length;
 //  });
@@ -44,6 +49,10 @@ let dataObj = {
         "orange": [],
         "yellow": [],
         "green": []
+    },
+    "dischargeData":{
+        dischargeDistrict,
+        dischargeCount
     },
     "totalScreened": "",
     "totalPositive": "",
