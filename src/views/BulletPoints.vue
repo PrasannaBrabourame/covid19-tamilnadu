@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-        <span>Last Updated : 1st May 2020 6:00 PM</span>
+        <span>Last Updated : 4th June 2020 6:00 PM</span>
       </div>
       
     </div>
