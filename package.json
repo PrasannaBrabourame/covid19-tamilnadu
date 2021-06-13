@@ -10,7 +10,7 @@
     "data": "npm run clean && node ./google-sheet/crawl.js && node ./google-sheet/dataprocess.js"
   },
   "dependencies": {
-    "chart.js": "^2.7.3",
+    "chart.js": "^2.9.4",
     "chartkick": "^3.0.1",
     "drive-db": "^6.0.0",
     "hchs-vue-charts": "^1.2.8",
